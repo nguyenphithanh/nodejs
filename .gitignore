@@ -1,0 +1,8 @@
+# Compiled binary addons
+dist/
+
+# Dependency directories
+node_modules/
+logs/
+
+

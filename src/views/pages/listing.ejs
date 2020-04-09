@@ -1,0 +1,64 @@
+<!-- views/pages/index.ejs -->
+
+<!DOCTYPE html>
+<html lang="en">
+<body class="container">
+
+<header>
+</header>
+
+<main>
+    <h1>listing</h1>
+    <form action="/adduser" method="get">
+        <button type="submit" class="btn btn-info">Add user</button>
+    </form>
+</br>
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th>id</th>
+                <th>username</th>
+                <th>option</th>
+            </tr>
+        </thead>
+        <tbody>
+    <%
+        for(const user of users){
+    %>
+    <tr>
+       <td><%= user.id %> </td>
+       <td><%= user.userName %> </td>
+       <td> <button type="button" class="btn btn-success">delete account</button></td>
+    </tr>
+    <% } %>
+            
+        </tbody>
+    </table>
+    <!--    
+          
+        
+            <td>John</td>
+            <td>Doe</td>
+            <td>john@example.com</td>
+          </tr>
+          <tr>
+            <td>Mary</td>
+            <td>Moe</td>
+            <td>mary@example.com</td>
+          </tr>
+          <tr>
+            <td>July</td>
+            <td>Dooley</td>
+            <td>july@example.com</td>
+          </tr>
+        
+      
+    -->
+</main>
+
+<footer>
+    
+</footer>
+
+</body>
+</html>

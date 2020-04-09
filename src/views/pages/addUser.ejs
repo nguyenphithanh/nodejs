@@ -1,0 +1,76 @@
+<!-- views/pages/index.ejs -->
+
+<!DOCTYPE html>
+<html lang="en">
+<body class="container">
+
+<header>
+</header>
+
+<main>
+    <div class="container">
+        <h2>Create User</h2>
+        <form action="/adduser" method="POST">
+          <div class="form-group">
+            <label for="username">Username:</label>
+            <input type="text" class="form-control" id="username" name="userName" placeholder="Enter username">
+          </div>
+          <!--Error input-->
+          <div class="form-group">
+            <%
+            if(locals.hasUserNameError) {%>
+              <div class="alert alert-danger">
+              <strong>ERROR: </strong> <%= locals.userNameErorr 
+              %>
+            </div>
+              <% } %> 
+          </div>
+          <div class="form-group">
+            <label for="pwd">Password:</label>
+            <input type="password" class="form-control" id="pwd" name= "password" placeholder="Enter password">
+          </div>
+          <!--Error password-->
+          <div class="form-group">
+            <%
+            if(locals.hasPasswordError) {%>
+              <div class="alert alert-danger">
+              <strong>ERROR: </strong> <%= locals.passwordError 
+              %>
+            </div>
+              <% } %> 
+          </div>
+          <!--Error Confirm password-->
+          <div class="form-group">
+            <label for="pwd">Confirm password:</label>
+            <input type="password" class="form-control" id="pwd" name="" placeholder="Enter Confirm password">
+          </div>
+          <div class="form-group">
+                <%
+                if(locals.hasConfirmPasswordError) {%>
+                  <div class="alert alert-danger">
+                  <strong>ERROR: </strong> <%= locals.confirmPasswordError 
+                  %>
+                </div>
+                  <% } %> 
+              </div>
+          </div>
+          <button type="submit" class="btn btn-default">Submit</button>
+          <div class="form-group">
+            <%
+            if(locals.hasCreateUserError) {%>
+              <div class="alert alert-danger">
+              <strong>ERROR: </strong> <%= locals.createUserError 
+              %>
+            </div>
+              <% } %> 
+          </div>
+        </form>
+      </div>
+</main>
+
+<footer>
+    
+</footer>
+
+</body>
+</html>

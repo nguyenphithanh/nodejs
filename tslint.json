@@ -1,0 +1,69 @@
+{
+  "extends": "tslint:recommended",
+  "rules": {
+    "arrow-parens": [
+      true
+    ],
+    "arrow-return-shorthand": [
+      true
+    ],
+    "await-promise": [true, "Bluebird"],
+    "completed-docs": false,
+    "curly": true,
+    "export-name": false,
+    "import-name": false,
+    "interface-over-type-literal": true,
+    "linebreak-style": false,
+    "max-classes-per-file": false,
+    "no-angle-bracket-type-assertion": false,
+    "no-any": false,
+    "no-backbone-get-set-outside-model": false,
+    "no-console": [
+      true,
+      "debug",
+      "info",
+      "log",
+      "trace",
+      "warn"
+    ],
+    "no-default-export": false,
+    "no-increment-decrement": false,
+    "no-internal-module": true,
+    "no-magic-numbers": true,
+    "no-misused-new": true,
+    "no-namespace": false,
+    "no-non-null-assertion": false,
+    "no-relative-imports": false,
+    "no-unnecessary-initializer": true,
+    "no-unsafe-any": false,
+    "object-literal-sort-keys": false,
+    "prefer-function-over-method": true,
+    "prefer-method-signature": true,
+    "quotemark": [true, "single"],
+    "strict-boolean-expressions": false,
+    "trailing-comma": false,
+    "typedef": [
+      true,
+      "parameter",
+      "property-declaration",
+      "member-variable-declaration"
+    ],
+    "whitespace": [
+      true,
+      "check-branch",
+      "check-decl",
+      "check-operator",
+      "check-module",
+      "check-separator",
+      "check-rest-spread",
+      "check-type",
+      "check-type-operator",
+      "check-preblock"
+    ]
+  },
+  "linterOptions": {
+    "exclude": [
+      "./node_modules/**"
+    ]
+  }
+}
